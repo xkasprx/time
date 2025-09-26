@@ -14,18 +14,24 @@
 }
 
 .clock-time {
+	display: flex;
 	font-family: 'Segoe UI', 'Arial', sans-serif;
-	font-size: 9rem;
+	font-size: 10.5rem;
 	color: #ffffff;
 	font-weight: bold;
 	margin-bottom: 1.2rem;
 	text-shadow: 2px 2px 12px #00000088;
+	width: 100%;
+	justify-content: center;
 }
 
 .clock-date {
+	display: flex;
 	font-family: 'Segoe UI', 'Arial', sans-serif;
 	font-size: 4rem;
 	color: #273266;
 	font-weight: bold;
 	text-shadow: 1px 1px 6px #00000055;
+	width: 100%;
+	justify-content: center;
 }
