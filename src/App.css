@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	background: #798cb1;
+	background: #889bc0;
 }
 
 .clock-logo {
@@ -25,6 +25,6 @@
 .clock-date {
 	font-family: 'Segoe UI', 'Arial', sans-serif;
 	font-size: 3.5rem;
-	color: #e0e0e0;
+	color: #273266;
 	text-shadow: 1px 1px 6px #00000055;
 }
