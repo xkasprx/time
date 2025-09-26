@@ -1,0 +1,30 @@
+.clock-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #798cb1;
+}
+
+.clock-logo {
+	margin-bottom: 2rem;
+	width: 50%;
+	max-height: 800px;
+}
+
+.clock-time {
+	font-family: 'Segoe UI', 'Arial', sans-serif;
+	font-size: 9rem;
+	color: #ffffff;
+	font-weight: bold;
+	margin-bottom: 1.2rem;
+	text-shadow: 2px 2px 12px #00000088;
+}
+
+.clock-date {
+	font-family: 'Segoe UI', 'Arial', sans-serif;
+	font-size: 3.5rem;
+	color: #e0e0e0;
+	text-shadow: 1px 1px 6px #00000055;
+}
