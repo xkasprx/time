@@ -24,7 +24,8 @@
 
 .clock-date {
 	font-family: 'Segoe UI', 'Arial', sans-serif;
-	font-size: 3.5rem;
+	font-size: 4rem;
 	color: #273266;
+	font-weight: bold;
 	text-shadow: 1px 1px 6px #00000055;
 }
