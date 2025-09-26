@@ -6,12 +6,10 @@ function App() {
 
 	useEffect(() => {
 		const timer = setInterval(() => setNow(new Date()), 1000); // Update every second
-		const timer2 = setInterval(() => setNow(new Date()), 60000); // Force re-render every minute for date update
-		const timer3 = setInterval(() => window.location.reload(), 600000); // Reload every 10 minutes
+		const timer2 = setInterval(() => window.location.reload(), 600000); // Reload every 10 minutes
 		return () => {
 			clearInterval(timer);
 			clearInterval(timer2);
-			clearInterval(timer3);
 		};
 	}, []);
 
