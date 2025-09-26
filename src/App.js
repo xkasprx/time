@@ -5,15 +5,27 @@ function App() {
 	const [now, setNow] = useState(new Date());
 
 	useEffect(() => {
-		const timer = setInterval(() => setNow(new Date()), 1000); // Update every second
-		const timer2 = setInterval(() => window.location.reload(), 600000); // Reload every 10 minutes
+		let currentCount = 0;
+		let oneSecond = 1000; // 1 second
+		let tenMinutes = 600000; // 10 minutes
+
+		const timer = setInterval(() => {
+			if(currentCount === tenMinutes){
+				// Reload the page every 10 minutes to prevent memory leaks
+				window.location.reload();
+				currentCount = 0;
+			}else{
+				// Update the timeString and dateString every second
+				setNow(new Date());
+				currentCount += oneSecond;
+			}
+		}, oneSecond);
 		return () => {
 			clearInterval(timer);
-			clearInterval(timer2);
 		};
 	}, []);
 
-	const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+	const timeString = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
 	const dateString = now.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
 	return (
